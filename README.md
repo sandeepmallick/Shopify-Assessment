@@ -1,6 +1,7 @@
 # 🛍️ Shopify Product Page Clone
 
 # 📖 Overview
+![Uploading image.png…]()
 
 This project is a Shopify Product Page Clone built using HTML, CSS, and JavaScript as part of an assignment.
 It replicates the design and interactive features of a real Shopify product page — including product image gallery, variant selection, size chart modal, bundle suggestions, and related product recommendations.
