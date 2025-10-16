@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shopify Product Page Clone
+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="grid">
+      <!-- LEFT: Gallery -->
+      <section class="gallery" aria-label="Product images">
+        <div class="gallery-inner">
+          <div class="main-image" id="mainImageWrap">
+            <img id="mainImage" src="image/-473Wx593H-463534806-red-MODEL2.png" alt="Red shirt"
+">
+          </div>
+
+          <aside class="thumbnails" aria-hidden="false">
+            <div class="thumb-list" id="thumbList" role="list">
+              <!-- Thumbnails (JS populated) -->
+            </div>
+            <div class="thumbs-horizontal" aria-hidden="true"></div>
+          </aside>
+        </div>
+
+        <!-- Pair well with carousel -->
+        <div class="pair-well" aria-label="Pair well with">
+          <h4 style="margin:0 0 8px">Pairs well with</h4>
+          <div class="pair-row" id="pairRow">
+            <!-- Cards (JS) -->
+          </div>
+        </div>
+
+        <!-- Bundle -->
+        <div class="bundle" aria-label="Bundle suggestion">
+          <h4 style="margin:0 0 8px">Buy these together</h4>
+          <div style="display:flex; align-items:center; gap:12px" class="bundle-list">
+            <div class="bundle-item">
+              <img src="image/-473Wx593H-700251056-black-MODEL3.avif" alt="Cozy Sweater">
+              <div>
+                <div style="font-weight:700">Baggy Jeans</div>
+                <div class="muted">₹1,499</div>
+              </div>
+            </div>
+            <div class="bundle-item">
+              <img src="image/-473Wx593H-702294493-red-MODEL.avif" alt="Beanie">
+              <div>
+                <div style="font-weight:700">Cap</div>
+                <div class="muted">₹399</div>
+              </div>
+            </div>
+            <div class="bundle-summary">
+              <div class="muted">Individual total</div>
+              <div style="font-weight:800; font-size:18px">₹1,898</div>
+              <div style="margin-top:8px">
+                <button class="btn" id="addBundle">Add Bundle to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+          <div class="tab-buttons" role="tablist" aria-label="Product tabs">
+            <button class="tab-btn active" data-tab="desc" role="tab" aria-selected="true">Description</button>
+            <button class="tab-btn" data-tab="info" role="tab">Product Information</button>
+            <button class="tab-btn" data-tab="ship" role="tab">Shipping Details</button>
+          </div>
+          <div class="tab-content" id="tabContent">
+            <div id="desc" class="tab-panel">A cool red shirt made from soft blends. Perfect for chilly days. Hand wash cold. Made in India.</div>
+            <div id="info" class="tab-panel" style="display:none">Material: 60% Cotton, 30% Acrylic, 10% Wool. Care: Hand wash. Size guide available.</div>
+            <div id="ship" class="tab-panel" style="display:none">Ships within 2–4 business days. Free returns within 15 days.</div>
+          </div>
+        </div>
+
+        <!-- Related products -->
+        <div class="related">
+          <h4 style="margin:10px 0">Related products</h4>
+          <div class="related-grid" id="relatedGrid">
+            <!-- JS fills 4 cards -->
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT: Product Info / Purchase -->
+      <aside class="info" aria-label="Product purchase panel">
+        <div class="vendor">Cozy & Co</div>
+        <h1 class="title">Red shirt</h1>
+        <div class="price-row"><div class="price">₹1,499</div><div class="compare">Inclusive of taxes</div></div>
+
+        <!-- Colour variants -->
+        <div class="variant-row">
+          <div style="min-width:88px">Colour</div>
+          <div class="swatches" id="colourSwatches" role="radiogroup" aria-label="Colours">
+            <!-- JS swatches -->
+          </div>
+          <button class="btn secondary" id="compareColoursBtn">Compare Colours</button>
+        </div>
+
+        <!-- Size variants -->
+        <div class="variant-row">
+          <div style="min-width:88px">Size</div>
+          <select id="sizeSelect" class="size-select" aria-label="Select size">
+            <!-- options JS -->
+          </select>
+          <button class="size-chart-btn" id="sizeChartBtn">Size Chart</button>
+        </div>
+
+        <div id="selectedState" class="muted">Selected: <span id="stateLabel">Black / M</span></div>
+
+        <div class="actions">
+          <button class="btn" id="addToCart">Add to cart</button>
+          <button class="btn secondary" id="wishlist">Add to wishlist</button>
+        </div>
+
+        <hr style="margin:14px 0; border:none; border-top:1px solid #eef2f6">
+        <!-- <div class="muted">Secure payment • 30-day returns</div> -->
+      </aside>
+    </div>
+  </div>
+
+  <!-- OVERLAY & MODALS -->
+  <div class="overlay" id="overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" id="modalContent">
+      <!-- content injected by JS -->
+    </div>
+  </div>
+
+<script src="script.js"> </script>
+</body>
+</html>
